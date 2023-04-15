@@ -1,4 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
+import { Colors } from './UI/variables';
+
+
 
 export const GlobalStyle = createGlobalStyle`
   *,
@@ -18,8 +21,10 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    background-color: ${Colors.darkBackground};
     font-family: Inter, sans-serif;
     line-height: 1.5;
+    color: ${Colors.textColor};
     -webkit-font-smoothing: antialiased;
   }
 
@@ -41,6 +46,4 @@ export const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export const Colors = {
-  primary: ''
-}
+
