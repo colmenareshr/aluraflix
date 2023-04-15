@@ -1,26 +1,39 @@
 import styled from 'styled-components';
+import  Colors  from '../UI/variables';
 
-const Botao = ({cta}) => {
+const Botao = ({ children }) => {
   return (
     <ButtonWrapper>
-      <MeuBotao>
-        {cta}
-      </MeuBotao>
+      <MeuBotao >{children}</MeuBotao>
     </ButtonWrapper>
   );
-}
+};
 
-export default Botao
+export default Botao;
 
 const ButtonWrapper = styled.div`
   display: flex;
   align-items: center;
+  gap: 0.5rem;
 `;
 
 const MeuBotao = styled.button`
-  background-color: var(--orange);
-  color: var(--white);
+  display: flex;
+  align-items: center;
+  place-items: center;
+  gap: 0.5rem;
+  background-color: ${(props) =>
+    props.primary ? Colors.primaryBtn : Colors.secondaryBtn};
+  color: ${(props) =>
+    props.primary ? Colors.textPrimaryBtn : Colors.textSecondaryBtn};
   border: none;
   border-radius: 5px;
-  padding: .5rem 1rem;
-`
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+
+  &:hover {
+    background-color: ${(props) =>
+      props.primary ? Colors.primaryBtnHover : Colors.secondaryBtnHover};
+  }
+`;

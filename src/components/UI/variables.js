@@ -8,3 +8,7 @@ export const Colors = {
   secondaryBtnHover: 'rgba(51,51,51,0.8)',
   textSecondaryBtn: '#c9d1d9',
 };
+
+export const Sizes = {
+  desktop: '1024px',
+};
