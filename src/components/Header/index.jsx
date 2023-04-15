@@ -23,10 +23,9 @@ const HeaderContainer = styled.header`
   @media (min-width: ${Sizes.desktop}) {
     justify-content: space-between;
   }
-
 `;
 const HeaderLogo = styled.img`
-  max-width: 250px;
+  max-width: 18rem;
   height: auto;
 `;
 
