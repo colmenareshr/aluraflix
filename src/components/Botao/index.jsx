@@ -1,10 +1,12 @@
 import styled from 'styled-components';
-import  Colors  from '../UI/variables';
+import { Colors } from '../UI/variables';
 
-const Botao = ({ children }) => {
+const Botao = ({ video }) => {
   return (
     <ButtonWrapper>
-      <MeuBotao >{children}</MeuBotao>
+      <MeuBotao primary href={video} target='_blank'>
+        Asistir video
+      </MeuBotao>
     </ButtonWrapper>
   );
 };
@@ -17,7 +19,7 @@ const ButtonWrapper = styled.div`
   gap: 0.5rem;
 `;
 
-const MeuBotao = styled.button`
+const MeuBotao = styled.a`
   display: flex;
   align-items: center;
   place-items: center;

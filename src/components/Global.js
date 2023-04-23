@@ -1,8 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { Colors } from './UI/variables';
 
-
-
 export const GlobalStyle = createGlobalStyle`
   *,
   *::after,
@@ -27,6 +25,10 @@ export const GlobalStyle = createGlobalStyle`
     color: ${Colors.textColor};
     -webkit-font-smoothing: antialiased;
   }
+  
+  a {
+    text-decoration: none;
+  }
 
   img, picture, video, canvas, svg {
     display: block;
@@ -45,5 +47,3 @@ export const GlobalStyle = createGlobalStyle`
     isolation: isolate;
   }
 `;
-
-

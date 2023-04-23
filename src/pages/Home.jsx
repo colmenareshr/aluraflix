@@ -15,11 +15,13 @@ const Home = () => {
   return (
     <>
       <HeroSection />
-      <VideoPreview title={videoRandom.title} thumb={videoRandom.thumbnail} />
+      <VideoPreview
+        title={videoRandom.title}
+        thumb={videoRandom.thumbnail}
+        video={videoRandom.url}
+      />
     </>
   );
 };
 
 export default Home;
-
-

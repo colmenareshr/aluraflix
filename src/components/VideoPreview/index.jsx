@@ -1,14 +1,15 @@
 import styled from 'styled-components';
-import { BsYoutube } from 'react-icons/bs';
 import { Colors } from '../UI/variables';
+import Botao from '../../components/Botao';
 
-const VideoPreview = ({ title, thumb }) => {
+const VideoPreview = ({ title, thumb, video }) => {
   return (
     <VideoPreviewSection>
       <VideoPreviewContainer>
         <VideoPreviewRandom src={thumb} alt={title} />
       </VideoPreviewContainer>
       <VideoPreviewTitle>{title}</VideoPreviewTitle>
+      <Botao video={video} />
     </VideoPreviewSection>
   );
 };
